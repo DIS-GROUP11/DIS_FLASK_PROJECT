@@ -1,0 +1,5 @@
+Commands to execute while we run code for first time or for further changes or upgrades
+python -m venv venv (only first time - )
+venv\Scripts\activate
+pip install -r requirements.txt (only first time)
+flask run

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register your adventure travels account</title>
+    <link rel="stylesheet" href="form_styles.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <div id="card">
+        <div id="card-content">
+            {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}</p>
+            {% endif %}
+            <div id="card-title">
+                <h1>Register</h1>
+            </div>
+            <form method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="btn-center">
+                    <button type="submit" class="btn">Register</button>
+                </div>
+            </form>
+            <div id="prompt">
+                Already have an account? <a href="/login">Login here</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

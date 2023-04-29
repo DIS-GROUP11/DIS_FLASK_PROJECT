@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Travel</title>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header" id="home">
+        <nav id="navbar">
+            <a href="#home" class="logo">ADVENTURE TRAVEL <span>*</span></a>
+            <div class="links" id="nav">
+                <a href="/login" id="user" class="nav-link">Login</a>
+                <a href="#about" class="nav-link id-nav">About</a>
+                <a href="#blog" class="nav-link id-nav">Blog</a>
+                <a href="#service" class="nav-link id-nav">Services</a>
+                <a href="#team" class="nav-link id-nav">Team</a>
+                <a href="#visitor-chart" class="nav-link id-nav">Visitor Chart</a>
+                <a href="#contact" class="nav-link id-nav">Contact</a>
+            </div>
+            <div id="burger">
+                <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+                <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+            </div>
+        </nav>
+        <div class="content">
+            <h3>Unleash Your Inner Explorer with Our Adventure Travel Packages!</h3>
+            <h1>Embark on Your Next Adventure</h1>
+            <a class="btn" href="/discover">Discover Us</a>
+        </div>
+    </div>
+    <script>// Function to close the menu
+        function closemenu() {
+            document.getElementById("nav").style.right = "-200px";
+            document.getElementById("menu-btn").style.display = "block";
+            document.getElementById("close").style.display = "none";
+        }
+        // Smooth scrolling effect
+        const links = document.querySelectorAll(".links .id-nav");
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const href = link.getAttribute("href");
+                const offsetTop = document.querySelector(href).offsetTop;
+
+                scroll({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+
+                // Call the function to close the menu
+                closemenu();
+            });
+        });
+    </script>
+    <!-- Header Section End -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="image">
+
+            </div>
+            <div class="about-content">
+                <h1>What makes our website special?</h1>
+                <h3>Expertly curated, eco-conscious, tailor-made adventures.</h3>
+                <p>Our adventure travel website stands out by offering curated,
+                    personalized adventures with expert local guides, emphasizing responsible travel practices
+                    and providing comprehensive trip planning for a seamless, unforgettable experience.</p>
+                <a href="/about" class="btn" style="color: black;">About Us</a>
+
+            </div>
+        </div>
+    </section>
+    <!-- About Section End-->
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <h1 class="heading">Our <span>Blog</span></h1>
+        <p class="heading-description">Read our blog and know more about our latest updates.</p>
+        <div class="container">
+            <div class="post">
+                <div class="blog-img">
+                    <img src="img/hiking.jpg" alt="">
+                    <span>21 <br> Apr </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By admin |<span> Sri Venkatesh Kumar Sattu</span></h3>
+                    <h1>Thrilling Trails: Unforgettable Hiking Adventures Across the Globe</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="img/Dive.jpg" alt="">
+                    <span>14 <br> Apr </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By admin |<span> Madhumitha Jeripothula</span></h3>
+                    <h1>Dive into the Unknown: Exploring the World's Most Spectacular Underwater Wonders</h1>
+                    <p></p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <img src="img/terrain.jpg" alt="">
+                    <span>07 <br> Apr </span>
+                </div>
+                <div class="blog-content">
+                    <h3>By admin |<span> Sai Koti Reddy Seelam</span></h3>
+                    <h1>Cycling Escapades: Pedal Your Way Through Scenic Routes and Challenging Terrain</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End-->
+
+    <!-- Service Section -->
+    <section class="service" id="service">
+        <h1 class="heading">Our <span>Services</span></h1>
+        <p class="heading-description">We deliver our products free door to door 24x7</p>
+        <div class="container">
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Flight.png" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Flight Booking</h3>
+                    <p>Our travel website allows users to search for and book flights to their destination.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Hotel.jpg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Hotel Booking</h3>
+                    <p>Users can also search for and book accommodations such as hotels, hostels, and vacation rentals.
+                    </p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/car.jpeg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Car Rentals</h3>
+                    <p>Our Travel website can also provide car rental options for travelers who need transortation
+                        during their trip.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Back_Ground_about2.jpg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Destination Guides</h3>
+                    <p>We provide information about popular destinations, including things to do, places to eat, and
+                        local customs.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Vacation.jpg" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Vacation Packages</h3>
+                    <p>Some travel websites offer pre-packaged vacation deals that include flights, accommodations, and
+                        other activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Section End -->
+
+
+
+    <!-- Team Section -->
+
+    <section class="team" id="team">
+        <h1 class="heading"> Our <span>Team</span></h1>
+        <p class="heading-description"> Long lasting Excitement & true love for Adventures</p>
+        <div class="container">
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/Person_3.jpg" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>Madhumitha Jeripothula</h3>
+                    <p>Page Concept & html</p>
+                    <div class="social">
+                        <a href="https://www.instagram.com/madhumithadolly" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:jeripothula@usf.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/madhumitha-jeripothula-409b1a200" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/Person_2_597x800.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>Sai Koti Reddy Seelam</h3>
+                    <p>Javascript & Chart</p>
+                    <div class="social">
+                        <a href="https://www.instagram.com/sai149" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:saikotireddyseelam@usf.edu" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sai-koti-reddy-seelam-229533200" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/venkatesh.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>Sri Venkatesh Kumar Sattu</h3>
+                    <p>Media Query & Responsiveness</p>
+                    <div class="social">
+                        <a href="https://www.instagram.com/skipperr_venkatesh" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:srivenkateshkumar@usf.edu" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sattu-sri-venkatesh-kumar-849443127" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/madhumain.jpeg" alt="">
+                </div>
+                <div class="team-content">
+                    <h3>Madhu Kore</h3>
+                    <p>CSS Designer</p>
+                    <div class="social">
+                        <a href="https://www.instagram.com/madhukore77" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:madhu48@usf.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/madhukore" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End-->
+
+    <!-- Visitor Chart Section -->
+
+    <section class="visitor-chart" id="visitor-chart">
+        <h1 class="heading">Website <span>Visitors</span></h1>
+        <p class="heading-description">Track the number of visitors to our website</p>
+        <div class="container">
+            <canvas id="visitorChart"></canvas>
+        </div>
+        <p id="totalVisitors" class="total-visitors"></p>
+    </section>
+    <!-- Visitor Chart Section End -->
+
+    <!-- Contact Section  -->
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Us</span></h1>
+        <p class="heading-description">We are always here for you...</p>
+        <div class="container">
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>Email address <br> <span>Send email anytime</span></h2>
+                </div>
+                <div>
+                    <p>admin@adventureTravel.com</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>Address <br> <span>Find Us</span></h2>
+                </div>
+                <div>
+                    <p>Tampa, USA.</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>Call Us <br> <span>Call us anytime</span></h2>
+                </div>
+                <div>
+                    <p>+1234567890</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section End -->
+
+
+    <!-- Footer Section -->
+    <section class="footer">
+
+
+        <div class="container">
+            <div class="footer-box">
+                <h3>about us </h3>
+                <p>Discover exhilarating experiences and off-the-beaten-path destinations with us,
+                    as we guide you through awe-inspiring adventure travel stories, expert tips, and insider secrets on
+                    our website and blog.
+                    Unleash your wanderlust and join our global community of thrill-seekers and nature enthusiasts! </p>
+                <p>Copyrights &copy; 2023 All rights reserved</p>
+
+            </div>
+            <div class="footer-box">
+                <h3>Newsletter</h3>
+                <p>Stay updated with our latests</p>
+                <form>
+                    <input type="email" name="email" placeholder="admin@gmail.com">
+                    <button type="submit"> <a href="mailto:YourEmailAddress@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a></button>
+                </form>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <p>Connect With Us On:</p>
+                <div>
+                    <a href="https://www.instagram.com/YourUsername" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/YourUsername" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:YourEmailAddress@outlook.com" target="_blank"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize the visitor chart
+        function initVisitorChart() {
+            const ctx = document.getElementById('visitorChart').getContext('2d');
+            const visitorData = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [1200, 900, 1100, 1400, 0, 0, 0, 0, 0, 0, 0, 0],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                }]
+            };
+            const visitorOptions = {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            };
+            const visitorChart = new Chart(ctx, {
+                type: 'bar',
+                data: visitorData,
+                options: visitorOptions
+            });
+            // Calculate the total number of visitors
+            const totalVisitors = visitorData.datasets[0].data.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+            // Display the total number of visitors
+            document.getElementById('totalVisitors').innerText = `Total Visitors: ${totalVisitors}`;
+        }
+
+        initVisitorChart();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+
+#card {
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    margin: 6rem auto 8.1rem auto;
+    width: 340px;
+}
+
+#card-content {
+    padding: 12px 44px;
+}
+
+#card-title {
+    text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 18px 0;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-center {
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+#prompt {
+    text-align: center;
+    margin-bottom: 24px;
+}
